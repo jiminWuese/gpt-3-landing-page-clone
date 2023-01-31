@@ -1,23 +1,23 @@
-import logo from './logo.svg';
-import './App.css';
+import './App.scss';
 
+import { Blog, Features, Footer, Header, MoreUiUx, Possibility } from './containers';
+import { Navbar, Cta, Brand } from './components';
+
+//Assembling all components to render in index.js.
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+  return ( 
+    <div className='App'>
+      <div className='gradient__bg'>
+        <Navbar />
+        <Header />
+      </div>
+      <Brand />
+      <MoreUiUx />
+      <Features />
+      <Possibility />
+      <Cta />
+      <Blog />
+      <Footer />
     </div>
   );
 }
